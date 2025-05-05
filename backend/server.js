@@ -47,11 +47,11 @@ io.on("connection", (socket) => {
 
   // User connects and sets up socket
   socket.on("setup", (userData) => {
-    socket.join(userData._id);
-    onlineUsers.set(userData._id, socket.id); // Add to online map
-    io.emit("online users", Array.from(onlineUsers.keys())); // Notify all
-    socket.emit("connected");
-    console.log(`USER CONNECTED: ${userData.name}`);
+      socket.join(userData._id);
+      onlineUsers.set(userData._id, socket.id); // Add to online map
+      io.emit("online users", Array.from(onlineUsers.keys())); // Notify all
+      socket.emit("connected");
+      console.log(`USER CONNECTED: ${userData.name}`);
   });
 
   socket.on("join chat", (room) => {

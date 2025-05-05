@@ -2,7 +2,7 @@ import { Button, Input, Row, Col, Typography, Spin, Tag } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import { ChatState } from "../Context/ChatProvider";
@@ -134,6 +134,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 {getSender(user, selectedChat.users)}{" "}
                 {isUserOnline() && <Tag color="green">Online</Tag>}
               </Text>
+              <p>{istyping ? "Typing..." : ""}</p>
             </Col>
           </Row>
 
@@ -173,19 +174,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 );
               })
             )}
-            {istyping && (
-              <Lottie
-                options={{
-                  loop: true,
-                  autoplay: true,
-                  animationData: animationData,
-                  rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
-                }}
-                height={40}
-                width={70}
-                style={{ marginTop: 5 }}
-              />
-            )}
+            
           </div>
 
           <Row style={{ marginTop: "10px" }} gutter={8}>
