@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://chat-application-api-qqxy.onrender.com",
   "private": true,
   "dependencies": {
     "antd": "^5.13.5",

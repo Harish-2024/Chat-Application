@@ -10,7 +10,7 @@ import { getSender, getSenderFull } from "../config/ChatLogics";
 
 const { Text } = Typography;
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chat-application-api-qqxy.onrender.com";
 let socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
