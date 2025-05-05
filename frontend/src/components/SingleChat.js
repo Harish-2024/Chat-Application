@@ -2,8 +2,6 @@ import { Button, Input, Row, Col, Typography, Spin, Tag } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Lottie from "lottie-react";
-import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import { ChatState } from "../Context/ChatProvider";
 import { getSender, getSenderFull } from "../config/ChatLogics";

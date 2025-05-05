@@ -1,4 +1,3 @@
-import { Row, Col } from "antd";
 import { useState } from "react";
 import Chatbox from "../components/Chatbox";
 import MyChats from "../components/MyChats";

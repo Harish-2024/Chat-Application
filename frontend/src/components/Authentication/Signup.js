@@ -1,4 +1,4 @@
-import { Form, Input, Button, Upload, message } from "antd";
+import { Form, Input, Button, message } from "antd";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
