@@ -1,10 +1,7 @@
 import { Avatar, List } from "antd";
 import { ChatState } from "../../Context/ChatProvider";
 
-const UserListItem = ({ handleFunction }) => {
-  const { user } = ChatState();
-
-  return (
+const UserListItem = ({ user, handleFunction }) => (
     <List.Item
       onClick={handleFunction}
       style={{
@@ -37,6 +34,5 @@ const UserListItem = ({ handleFunction }) => {
       />
     </List.Item>
   );
-};
 
 export default UserListItem;
