@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.json()); // to accept json data
 app.use(cors({
-  origin: "https://chat-app-24.netlify.app/",
+  origin: "https://chat-app-24.netlify.app",
   credentials: true,
 }));
 
@@ -35,7 +35,8 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://chat-app-24.netlify.app/",
+    origin: "https://chat-app-24.netlify.app",
+    credentials: true,
   },
 });
 
