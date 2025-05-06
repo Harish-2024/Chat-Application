@@ -18,7 +18,8 @@ const MyChats = ({ fetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get("/api/chat", config);
+      const apiUrl = process.env.REACT_APP_API_URL;
+      const { data } = await axios.get(`${apiUrl}/api/chat`, config);
       setChats(data);
     } catch (error) {
       console.error("Error Occurred:", error);

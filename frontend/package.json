@@ -1,7 +1,6 @@
 {
-  "name": "frontend2",
+  "name": "frontend",
   "version": "0.1.0",
-  "proxy": "https://chat-application-api-qqxy.onrender.com",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

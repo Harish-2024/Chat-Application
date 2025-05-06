@@ -29,7 +29,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         headers: { Authorization: `Bearer ${user.token}` },
       };
       setLoading(true);
-      const { data } = await axios.get(`/api/message/${selectedChat._id}`, config);
+      const apiUrl = process.env.REACT_APP_API_URL;
+      const { data } = await axios.get(`${apiUrl}/api/message/${selectedChat._id}`, config);
       setMessages(data);
       setLoading(false);
       socket.emit("join chat", selectedChat._id);
@@ -48,7 +49,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             Authorization: `Bearer ${user.token}`,
           },
         };
-        const { data } = await axios.post("/api/message", {
+        const apiUrl = process.env.REACT_APP_API_URL;
+        const { data } = await axios.post(`${apiUrl}/api/message`, {
           content: newMessage,
           chatId: selectedChat._id,
         }, config);
